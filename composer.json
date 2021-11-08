@@ -2,7 +2,7 @@
     "name": "lagoon-examples/drupal9-mariadb",
     "description": "Project template for Drupal 9 projects with MariaDB, hosted on Lagoon",
     "type": "project",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "The Lagoon Authors",
