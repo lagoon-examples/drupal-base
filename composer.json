@@ -1,12 +1,13 @@
 {
-    "name": "amazeeio/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer hosted on amazee.io",
+    "name": "lagoon-examples/drupal9-mariadb",
+    "description": "Project template for Drupal 9 projects with MariaDB, hosted on Lagoon",
     "type": "project",
     "license": "GPL-2.0+",
     "authors": [
         {
-            "name": "Michael Schmid michael@amazee.io",
-            "role": "CTO"
+            "name": "The Lagoon Authors",
+            "homepage": "https://github.com/uselagoon",
+            "email": "uselagoon@amazee.io"
         }
     ],
     "repositories": [

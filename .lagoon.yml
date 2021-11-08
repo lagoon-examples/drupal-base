@@ -1,6 +1,6 @@
 docker-compose-yaml: docker-compose.yml
 
-project: drupal9-example-simple
+project: drupal9-mariadb
 
 tasks:
 #   pre-rollout:
@@ -23,8 +23,6 @@ tasks:
         name: drush cr
         command: drush -y cr
         service: cli
-
-
 
 environments:
   9.x:

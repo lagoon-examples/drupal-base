@@ -18,7 +18,7 @@ docker-compose down
 docker-compose build && docker-compose up -d
 
 # Ensure mariadb pod is ready to connect
-docker run --rm --net drupal9-example-simple_default jwilder/dockerize dockerize -wait tcp://mariadb:3306 -timeout 1m
+docker run --rm --net drupal9-mariadb_default jwilder/dockerize dockerize -wait tcp://mariadb:3306 -timeout 1m
 ```
 
 Verification commands
@@ -33,16 +33,16 @@ docker-compose exec -T cli bash -c "drush cr -y"
 docker-compose exec -T cli bash -c "drush status" | grep "Drupal bootstrap" | grep "Successful"
 
 # Should have all the services we expect
-docker ps --filter label=com.docker.compose.project=drupal9-example-simple | grep Up | grep drupal9-example-simple_nginx_1
-docker ps --filter label=com.docker.compose.project=drupal9-example-simple | grep Up | grep drupal9-example-simple_mariadb_1
-docker ps --filter label=com.docker.compose.project=drupal9-example-simple | grep Up | grep drupal9-example-simple_php_1
-docker ps --filter label=com.docker.compose.project=drupal9-example-simple | grep Up | grep drupal9-example-simple_cli_1
+docker ps --filter label=com.docker.compose.project=drupal9-mariadb | grep Up | grep drupal9-mariadb_nginx_1
+docker ps --filter label=com.docker.compose.project=drupal9-mariadb | grep Up | grep drupal9-mariadb_mariadb_1
+docker ps --filter label=com.docker.compose.project=drupal9-mariadb | grep Up | grep drupal9-mariadb_php_1
+docker ps --filter label=com.docker.compose.project=drupal9-mariadb | grep Up | grep drupal9-mariadb_cli_1
 
 # Should ssh against the cli container by default
 docker-compose exec -T cli bash -c "env | grep LAGOON=" | grep cli-drupal
 
 # Should have the correct environment set
-docker-compose exec -T cli bash -c "env" | grep LAGOON_ROUTE | grep drupal9-example-simple.docker.amazee.io
+docker-compose exec -T cli bash -c "env" | grep LAGOON_ROUTE | grep drupal9-mariadb.docker.amazee.io
 docker-compose exec -T cli bash -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
 # Should be running PHP 7.4
