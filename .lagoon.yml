@@ -1,6 +1,6 @@
 docker-compose-yaml: docker-compose.yml
 
-project: drupal9-mariadb
+project: drupal9-base
 
 tasks:
 #   pre-rollout:

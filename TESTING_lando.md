@@ -1,5 +1,5 @@
-Lando Drupal 9 Simple - php7.4, nginx, mariadb
-==============================================
+Lando Drupal 9 base - php7.4, nginx, mariadb
+============================================
 
 This example exists primarily to test the following documentation:
 
@@ -32,18 +32,18 @@ lando drush cr -y
 lando drush status | grep "Drupal bootstrap" | grep "Successful"
 
 # Should have all the services we expect
-docker ps --filter label=com.docker.compose.project=drupal9mariadb | grep Up | grep drupal9mariadb_nginx_1
-docker ps --filter label=com.docker.compose.project=drupal9mariadb | grep Up | grep drupal9mariadb_mariadb_1
-docker ps --filter label=com.docker.compose.project=drupal9mariadb | grep Up | grep drupal9mariadb_mailhog_1
-docker ps --filter label=com.docker.compose.project=drupal9mariadb | grep Up | grep drupal9mariadb_php_1
-docker ps --filter label=com.docker.compose.project=drupal9mariadb | grep Up | grep drupal9mariadb_cli_1
-docker ps --filter label=com.docker.compose.project=drupal9mariadb | grep Up | grep drupal9mariadb_lagooncli_1
+docker ps --filter label=com.docker.compose.project=drupal9base | grep Up | grep drupal9base_nginx_1
+docker ps --filter label=com.docker.compose.project=drupal9base | grep Up | grep drupal9base_mariadb_1
+docker ps --filter label=com.docker.compose.project=drupal9base | grep Up | grep drupal9base_mailhog_1
+docker ps --filter label=com.docker.compose.project=drupal9base | grep Up | grep drupal9base_php_1
+docker ps --filter label=com.docker.compose.project=drupal9base | grep Up | grep drupal9base_cli_1
+docker ps --filter label=com.docker.compose.project=drupal9base | grep Up | grep drupal9base_lagooncli_1
 
 # Should ssh against the cli container by default
 lando ssh -c "env | grep LAGOON=" | grep cli-drupal
 
 # Should have the correct environment set
-lando ssh -c "env" | grep LAGOON_ROUTE | grep drupal9-mariadb.lndo.site
+lando ssh -c "env" | grep LAGOON_ROUTE | grep drupal9-base.lndo.site
 lando ssh -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
 # Should be running PHP 7.4
