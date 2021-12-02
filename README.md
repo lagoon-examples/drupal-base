@@ -55,10 +55,10 @@ This repository is set up with a `.lando.yml` file, which allows you to use Land
 2. Checkout the project repo and confirm the path is in Docker's file sharing config - https://docs.docker.com/docker-for-mac/#file-sharing
 
     ```bash
-    git clone https://github.com/uselagoon/drupal9-base.git drupal9-base && cd $_
+    git clone https://github.com/lagoon-examples/drupal9-base.git drupal9-base && cd $_
     ```
 
-3. Make sure you have pygmy-go stopped. Run `pygmygo stop` to be sure.
+3. Make sure you have pygmy-go stopped. Run `pygmy-go stop` to be sure.
 
 4. We already have a Lando file in this repository, so we just need to run the following command to get Lando up:
 
@@ -87,7 +87,7 @@ When installing the given `composer.json` some tasks are taken care of:
 * Themes (packages of type `drupal-theme`) will be placed in `web/themes/contrib/`
 * Profiles (packages of type `drupal-profile`) will be placed in `web/profiles/contrib/`
 * Creates the `web/sites/default/files`-directory.
-* Latest version of drush is installed locally for use at `vendor/bin/drush`.
+* Latest version of [Drush](https://www.drush.org/latest/) is installed locally for use at `vendor/bin/drush`.
 * Latest version of [Drupal Console](http://www.drupalconsole.com) is installed locally for use at `vendor/bin/drupal`.
 * The correct scaffolding for your Drupal core version is installed, along with Lagoon-specific scaffolding from [amazeeio/drupal-integrations](https://github.com/amazeeio/drupal-integrations) project and the `assets/` directory in this repo.  For more information see [drupal/core-composer-scaffold](https://github.com/drupal/core-composer-scaffold)
 
