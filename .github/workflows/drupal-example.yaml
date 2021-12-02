@@ -52,16 +52,16 @@ jobs:
     - name: Run docker-compose tests
       run: |
         yarn mocha --timeout 900000 test/*compose*.func.js
-    - name: Run Lando tests
-      timeout-minutes: 10
-      continue-on-error: true
-      run: |
-        yq e -i '.services.cli.overrides.environment.LANDO_WEBROOT_USER = "runner"' .lando.yml
-        yq e -i '.services.cli.overrides.environment.LANDO_WEBROOT_GROUP = "docker"' .lando.yml
-        yq e -i '.services.php.overrides.environment.LANDO_WEBROOT_USER = "runner"' .lando.yml
-        yq e -i '.services.php.overrides.environment.LANDO_WEBROOT_GROUP = "docker"' .lando.yml
-        yarn mocha --timeout 900000 test/*lando*.func.js
-    - name: Show Lando logs
-      continue-on-error: true
-      run: |
-        docker-compose -p drupal9base logs
+    # - name: Run Lando tests
+    #   timeout-minutes: 10
+    #   continue-on-error: true
+    #   run: |
+    #     yq e -i '.services.cli.overrides.environment.LANDO_WEBROOT_USER = "runner"' .lando.yml
+    #     yq e -i '.services.cli.overrides.environment.LANDO_WEBROOT_GROUP = "docker"' .lando.yml
+    #     yq e -i '.services.php.overrides.environment.LANDO_WEBROOT_USER = "runner"' .lando.yml
+    #     yq e -i '.services.php.overrides.environment.LANDO_WEBROOT_GROUP = "docker"' .lando.yml
+    #     yarn mocha --timeout 900000 test/*lando*.func.js
+    # - name: Show Lando logs
+    #   continue-on-error: true
+    #   run: |
+    #     docker-compose -p drupal9base logs
