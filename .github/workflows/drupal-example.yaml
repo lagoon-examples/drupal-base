@@ -1,0 +1,67 @@
+name: Drupal test routine
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'dev'
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  test-suite:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: "0"
+    - name: install Lando
+      run: |
+        wget https://files.lando.dev/installer/lando-x64-stable.deb
+        sudo dpkg --ignore-depends=docker-ce -i lando-x64-stable.deb
+    - name: Report versions
+      run: |
+        docker version
+        docker-compose version
+        lando version
+        node -v
+        yarn -v
+    - name: get user ids
+      run: |
+        ls -al .
+        whoami
+        id
+        id -u
+        id -g
+        getent group $(id -g)
+        groups
+    - name: Update codebase to follow CI configuration
+      run: |
+        sed -i -e "/###/d" docker-compose.yml
+    - name: Pull all images
+      run: |
+        docker-compose pull --ignore-pull-failures
+    - name: Install test harness
+      run: |
+        yarn add leia-parser mocha chai command-line-test
+    - name: Generate test files
+      run: |
+        yarn leia "TESTING*.md" test -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests' --split-file
+    - name: Run docker-compose tests
+      run: |
+        yarn mocha --timeout 900000 test/*compose*.func.js
+    # - name: Run Lando tests
+    #   timeout-minutes: 10
+    #   continue-on-error: true
+    #   run: |
+    #     yq e -i '.services.cli.overrides.environment.LANDO_WEBROOT_USER = "runner"' .lando.yml
+    #     yq e -i '.services.cli.overrides.environment.LANDO_WEBROOT_GROUP = "docker"' .lando.yml
+    #     yq e -i '.services.php.overrides.environment.LANDO_WEBROOT_USER = "runner"' .lando.yml
+    #     yq e -i '.services.php.overrides.environment.LANDO_WEBROOT_GROUP = "docker"' .lando.yml
+    #     yarn mocha --timeout 900000 test/*lando*.func.js
+    # - name: Show Lando logs
+    #   continue-on-error: true
+    #   run: |
+    #     docker-compose -p drupal9base logs

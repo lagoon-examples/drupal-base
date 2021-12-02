@@ -1,5 +1,5 @@
-Docker Compose Drupal 9 simple - php7.4, nginx, mariadb
-=======================================================
+Docker Compose Drupal 9 base - php8, nginx, mariadb
+===================================================
 
 This is a docker-compose version of the Lando example tests:
 
@@ -18,7 +18,7 @@ docker-compose down
 docker-compose build && docker-compose up -d
 
 # Ensure mariadb pod is ready to connect
-docker run --rm --net drupal9-mariadb_default jwilder/dockerize dockerize -wait tcp://mariadb:3306 -timeout 1m
+docker run --rm --net drupal9-base_default amazeeio/dockerize dockerize -wait tcp://mariadb:3306 -timeout 1m
 ```
 
 Verification commands
@@ -33,20 +33,20 @@ docker-compose exec -T cli bash -c "drush cr -y"
 docker-compose exec -T cli bash -c "drush status" | grep "Drupal bootstrap" | grep "Successful"
 
 # Should have all the services we expect
-docker ps --filter label=com.docker.compose.project=drupal9-mariadb | grep Up | grep drupal9-mariadb_nginx_1
-docker ps --filter label=com.docker.compose.project=drupal9-mariadb | grep Up | grep drupal9-mariadb_mariadb_1
-docker ps --filter label=com.docker.compose.project=drupal9-mariadb | grep Up | grep drupal9-mariadb_php_1
-docker ps --filter label=com.docker.compose.project=drupal9-mariadb | grep Up | grep drupal9-mariadb_cli_1
+docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base_nginx_1
+docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base_mariadb_1
+docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base_php_1
+docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base_cli_1
 
 # Should ssh against the cli container by default
 docker-compose exec -T cli bash -c "env | grep LAGOON=" | grep cli-drupal
 
 # Should have the correct environment set
-docker-compose exec -T cli bash -c "env" | grep LAGOON_ROUTE | grep drupal9-mariadb.docker.amazee.io
+docker-compose exec -T cli bash -c "env" | grep LAGOON_ROUTE | grep drupal9-base.docker.amazee.io
 docker-compose exec -T cli bash -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
-# Should be running PHP 7.4
-docker-compose exec -T cli bash -c "php -v" | grep "PHP 7.4"
+# Should be running PHP 8
+docker-compose exec -T cli bash -c "php -v" | grep "PHP 8"
 
 # Should have composer
 docker-compose exec -T cli bash -c "composer --version"
