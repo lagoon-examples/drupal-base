@@ -1,18 +1,30 @@
-# Composer template for Drupal projects hosted on amazee.io
+# Base template for Drupal 9 projects hosted on Lagoon
+
+This template includes everything necessary to run on [Lagoon](https://www.github.com/uselagoon/lagoon) (in both the local development environments or on hosted Lagoon clusters.)
 
 This project template should provide a kickstart for managing your site
-dependencies with [Composer](https://getcomposer.org/). It is based on the [original Drupal Composer Template](https://github.com/drupal-composer/drupal-project), but includes everything necessary to run on amazee.io (either the local development environment or on amazee.io servers.)
+dependencies with [Composer](https://getcomposer.org/). It is based on the [original Drupal Composer Template](https://github.com/drupal-composer/drupal-project), 
+
+## Included Services
+
+This example contains the following services:
+* Drupal 9.2
+* PHP 8.0
+* NGINX
+* MariaDB 10.5
+
+To see similar projects with additional services, please visit https://github.com/lagoon-examples and to find out more about the services, please visit the documentation at https://docs.lagoon.sh/lagoon
 
 ## Requirements
 
 * [docker](https://docs.docker.com/install/)
-* [pygmy](https://pygmy.readthedocs.io/) `gem install pygmy` (you might need `sudo` for this depending on your Ruby configuration)
+* [pygmy-go](https://www.github.com/fubarhouse/pygmy-go)
 
 **OR**
 
 * [Lando](https://docs.lando.dev/basics/installation.html#system-requirements)
 
-## Local environment setup - pygmy
+## Local environment setup - pygmy-go
 
 1. Checkout this project repo and confirm the path is in Docker's file sharing config - https://docs.docker.com/docker-for-mac/#file-sharing
 
@@ -20,7 +32,7 @@ dependencies with [Composer](https://getcomposer.org/). It is based on the [orig
     git clone https://github.com/lagoon-examples/drupal9-base.git drupal9-base && cd $_
     ```
 
-2. Make sure you don't have anything running on port 80 on the host machine (like a web server) then run `pygmy up`
+2. Make sure you don't have anything running on port 80 on the host machine (like a web server) then run `pygmy-go up`
 
 3. Build and start the build images:
 
@@ -46,7 +58,7 @@ This repository is set up with a `.lando.yml` file, which allows you to use Land
     git clone https://github.com/uselagoon/drupal9-base.git drupal9-base && cd $_
     ```
 
-3. Make sure you have pygmy stopped. Run `pygmy stop` to be sure.
+3. Make sure you have pygmy-go stopped. Run `pygmygo stop` to be sure.
 
 4. We already have a Lando file in this repository, so we just need to run the following command to get Lando up:
 
@@ -60,7 +72,9 @@ lando start
 lando drush si -y
 ```
 
-6. And now we have a fully working local Drupal site on Lando! For more information on how to deploy your site, check out our documentation or our deployment demo.
+6. Visit the new site @ `http://drupal9-base.lndo.site`
+ 
+7. For more information on how to configure your site, check out the [documentation](https://docs.lando.dev/config/lagoon.html).
 
 ## What does the template do?
 
@@ -111,4 +125,4 @@ section of composer.json:
 
 ### What are the "TESTING" files in this repo?
 
-These files are used by Github actions to run a basic suite of tests specific to this template.  They utilise the excellent [leia](https://github.com/lando/leia) tool to generate a set of mocha-compatible tests.  Have a look through the markdown for both files, and you will see what they do. These tests can also be generated and run locally.
+These files are used by Github actions to run a basic suite of tests specific to this template.  They utilise the excellent [Leia](https://github.com/lando/leia) tool to generate a set of mocha-compatible tests.  Have a look through the markdown for both files, and you will see what they do. These tests can also be generated and run locally.
