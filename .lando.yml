@@ -2,5 +2,38 @@ name: drupal9-base
 recipe: lagoon
 config:
   flavor: drupal
-  build:
-    - composer install
+services:
+  cli:
+    build:
+      - composer install
+events:
+  pre-start:
+    - cli: |
+        ls -al /home
+        id
+        echo "LANDO_WEBROOT_USER=" $LANDO_WEBROOT_USER
+        echo "LANDO_HOST_GID=" $LANDO_HOST_GID
+        echo "LANDO_RESET_DIR=" $LANDO_RESET_DIR
+        getent group "$LANDO_HOST_GID" | cut -d: -f1
+    - php: |
+        ls -al /home
+        id
+        echo "LANDO_WEBROOT_USER=" $LANDO_WEBROOT_USER
+        echo "LANDO_HOST_GID=" $LANDO_HOST_GID
+        echo "LANDO_RESET_DIR=" $LANDO_RESET_DIR
+        getent group "$LANDO_HOST_GID" | cut -d: -f1
+  post-start:
+    - cli: |
+        ls -al /home
+        id
+        echo "LANDO_WEBROOT_USER=" $LANDO_WEBROOT_USER
+        echo "LANDO_HOST_GID=" $LANDO_HOST_GID
+        echo "LANDO_RESET_DIR=" $LANDO_RESET_DIR
+        getent group "$LANDO_HOST_GID" | cut -d: -f1
+    - php: |
+        ls -al /home
+        id
+        echo "LANDO_WEBROOT_USER=" $LANDO_WEBROOT_USER
+        echo "LANDO_HOST_GID=" $LANDO_HOST_GID
+        echo "LANDO_RESET_DIR=" $LANDO_RESET_DIR
+        getent group "$LANDO_HOST_GID" | cut -d: -f1

@@ -53,6 +53,15 @@ jobs:
     - name: Run docker-compose tests
       run: |
         yarn mocha --timeout 900000 test/*compose*.func.js
+    - name: Start Lando
+      timeout-minutes: 10
+      continue-on-error: true    
+      run: |
+        lando --clear
+        lando destroy -y
+        lando poweroff
+        lando start
+        lando logs
     - name: Run Lando tests
       timeout-minutes: 10
       continue-on-error: true
