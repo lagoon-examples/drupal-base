@@ -2,6 +2,8 @@ name: drupal9-base
 recipe: lagoon
 config:
   flavor: drupal
-  build_as_root:
-    - ls -al /home
-    - composer install
+services:
+  cli:
+    build_as_root:
+      - ls -al /home
+      - composer install
