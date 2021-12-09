@@ -57,6 +57,7 @@ jobs:
       timeout-minutes: 10
       continue-on-error: true    
       run: |
+        docker image ls
         lando --clear
         lando destroy -y
         lando poweroff
