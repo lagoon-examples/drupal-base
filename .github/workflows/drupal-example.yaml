@@ -61,6 +61,7 @@ jobs:
         lando --clear
         lando destroy -y
         lando poweroff
+        lando rebuild -s cli -y
         lando start
         lando logs
     - name: Run Lando tests
