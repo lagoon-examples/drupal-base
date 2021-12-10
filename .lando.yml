@@ -4,6 +4,6 @@ config:
   flavor: drupal
 services:
   cli:
-    build_as_root:
+    build:
       - ls -al /home
       - composer install
