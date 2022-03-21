@@ -20,6 +20,7 @@
         "amazeeio/drupal_integrations": "0.3.7",
         "composer/installers": "2.1.0",
         "cweagans/composer-patches": "1.7.2",
+        "drupal/core-composer-scaffold": "9.3.8",
         "drupal/core-project-message": "9.3.8",
         "drupal/core-recommended": "9.3.8",
         "drupal/lagoon_logs": "2.0.1",
