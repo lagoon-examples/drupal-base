@@ -12,6 +12,10 @@
     ],
     "repositories": [
         {
+            "type": "vcs",
+            "url": "https://git.drupalcode.org/issue/lagoon_logs-3276367.git"
+        },
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
@@ -23,7 +27,7 @@
         "drupal/core-composer-scaffold": "9.4.5",
         "drupal/core-project-message": "9.4.5",
         "drupal/core-recommended": "9.4.5",
-        "drupal/lagoon_logs": "2.0.1",
+        "drupal/lagoon_logs": "3276367-drupal10-dev",
         "drush/drush": "11.1.1",
         "zaporylie/composer-drupal-optimizations": "1.2.0"
     },
