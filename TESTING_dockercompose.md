@@ -69,6 +69,10 @@ docker-compose exec -T cli bash -c "yarn --version"
 # Should have a running Drupal 9 site served by nginx on port 8080
 docker-compose exec -T cli bash -c "curl -kL http://nginx:8080" | grep "Drush Site-Install"
 
+# Internal files are not served by Nginx.
+docker-compose exec -T cli bash -c "curl -sI http://nginx:8080/composer.json" | grep "404 Not Found"
+docker-compose exec -T cli bash -c "curl -sI http://nginx:8080/core/composer.json" | grep "404 Not Found"
+
 # Should be able to db-export and db-import the database
 docker-compose exec -T cli bash -c "drush sql-dump --result-file /app/test.sql"
 docker-compose exec -T cli bash -c "drush sql-drop -y"
