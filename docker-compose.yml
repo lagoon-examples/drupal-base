@@ -1,5 +1,3 @@
-version: '2.3'
-
 x-volumes:
   &default-volumes
     # Define all volumes you would like to have real-time mounted into the docker containers
@@ -59,8 +57,7 @@ services:
       lando.type: nginx-drupal
     ports:
       - "8080" # exposes the port 8080 with a random local port, find it with `docker-compose port nginx 8080`
-    << : *default-volumes # loads the defined volumes from the top
-    << : *default-user # uses the defined user from top
+    << : [*default-volumes, *default-user]
     depends_on:
       - cli # basically just tells docker-compose to build the cli first
     environment:
@@ -81,8 +78,7 @@ services:
       lagoon.name: nginx # we want this service be part of the nginx pod in Lagoon
       lagoon.persistent: /app/web/sites/default/files/ # define where the persistent storage should be mounted too
       lando.type: php-fpm
-    << : *default-volumes # loads the defined volumes from the top
-    << : *default-user # uses the defined user from top
+    << : [*default-volumes, *default-user]
     depends_on:
       - cli # basically just tells docker-compose to build the cli first
     environment:
