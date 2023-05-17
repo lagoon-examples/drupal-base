@@ -2,8 +2,10 @@ x-volumes:
   &default-volumes
     # Define all volumes you would like to have real-time mounted into the docker containers
     volumes:
-      - .:/app:delegated ### Local overrides to mount host filesystem. Automatically removed in CI and PROD.
+      # - .:/app:delegated ### Local overrides to mount host filesystem. Automatically removed in CI and PROD.
       - files:/app/web/sites/default/files
+      - ./shadowapp:/shadowapp
+      - ./lagoon/entrypoints/900-rsyncapp.sh:/lagoon/entrypoints/900-rysncapp.sh
 
 x-environment:
   &default-environment
@@ -40,8 +42,8 @@ services:
       lando.type: php-cli-drupal
     << : *default-volumes # loads the defined volumes from the top
     user: root
-    volumes_from: ### mount the ssh-agent from the pygmy or cachalot ssh-agent. Automatically removed in CI.
-      - container:amazeeio-ssh-agent ### Local overrides to mount host SSH keys. Automatically removed in CI.
+    # volumes_from: ### mount the ssh-agent from the pygmy or cachalot ssh-agent. Automatically removed in CI.
+    #   - container:amazeeio-ssh-agent ### Local overrides to mount host SSH keys. Automatically removed in CI.
     environment:
       << : *default-environment # loads the defined environment variables from the top
 
