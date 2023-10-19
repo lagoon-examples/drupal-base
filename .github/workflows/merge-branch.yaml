@@ -7,7 +7,7 @@ jobs:
   sync-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
 
       - name: Merge main -> php81
         uses: devmasx/merge-branch@master

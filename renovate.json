@@ -29,6 +29,10 @@
         "drupal/core-project-message"
       ],
       "enabled": false
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub actions"
     }
   ]
 }
