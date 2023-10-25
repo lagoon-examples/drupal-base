@@ -33,10 +33,10 @@ docker compose exec -T cli bash -c "drush cr -y"
 docker compose exec -T cli bash -c "drush status" | grep "Drupal bootstrap" | grep "Successful"
 
 # Should have all the services we expect
-docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base_nginx_1
-docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base_mariadb_1
-docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base_php_1
-docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base_cli_1
+docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base-nginx-1
+docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base-mariadb-1
+docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base-php-1
+docker ps --filter label=com.docker.compose.project=drupal9-base | grep Up | grep drupal9-base-cli-1
 
 # Should ssh against the cli container by default
 docker compose exec -T cli bash -c "env | grep LAGOON=" | grep cli-drupal
