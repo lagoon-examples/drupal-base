@@ -1,4 +1,4 @@
-name: drupal9-base
+name: drupal-base
 recipe: lagoon
 config:
   flavor: drupal
