@@ -2,7 +2,7 @@
 .......PR...........................dfsdfsdf.....ss....fgdfg...dd....dfdfdfdf
 This template includes everything necessary to run on [Lagoon](https://www.github.com/uselagoon/lagoon) (in both the local development environments or on hosted Lagoon clusters.)
 
-This project template should provide a kickstart for managing your site
+This project template should provide a kickstart for dmanaging your site
 dependencies with [Composer](https://getcomposer.org/). It is based on the [original Drupal Composer Template](https://github.com/drupal-composer/drupal-project), 
 
 ## Included Services
