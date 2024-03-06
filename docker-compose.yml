@@ -22,8 +22,6 @@ x-user:
 volumes:
   files:
     {}
-  db:
-    {}
 
 services:
 
@@ -83,19 +81,6 @@ services:
       - cli # basically just tells docker-compose to build the cli first
     environment:
       << : *default-environment # loads the defined environment variables from the top
-
-  mariadb:
-    image: uselagoon/mariadb-10.11-drupal:latest
-    labels:
-      lagoon.type: mariadb
-      lando.type: mariadb-drupal
-    ports:
-      - "3306" # exposes the port 3306 with a random local port, find it with `docker-compose port mariadb 3306`
-    << : *default-user # uses the defined user from top
-    environment:
-      << : *default-environment
-    volumes:
-      - db:/var/lib/mysql
 
 networks:
   amazeeio-network:
