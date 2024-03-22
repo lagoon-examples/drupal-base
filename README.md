@@ -126,3 +126,6 @@ section of composer.json:
 ### What are the "TESTING" files in this repo?
 
 These files are used by Github actions to run a basic suite of tests specific to this template.  They utilise the excellent [Leia](https://github.com/lando/leia) tool to generate a set of mocha-compatible tests.  Have a look through the markdown for both files, and you will see what they do. These tests can also be generated and run locally.
+
+test
+
