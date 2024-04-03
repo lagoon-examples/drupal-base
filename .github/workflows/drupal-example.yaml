@@ -24,7 +24,6 @@ jobs:
     - name: Report versions
       run: |
         docker version
-        docker-compose version
         docker compose version
         lando version
         node -v
