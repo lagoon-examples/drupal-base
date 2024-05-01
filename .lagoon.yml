@@ -3,21 +3,25 @@ docker-compose-yaml: docker-compose.yml
 project: drupal-base
 
 tasks:
-#   pre-rollout:
-#     - run:
-#         name: drush sql-dump
-#         command: mkdir -p /app/web/sites/default/files/private/ && drush sql-dump --ordered-dump --gzip --result-file=/app/web/sites/default/files/private/pre-deploy-dump.sql.gz || true
-#         service: cli
+  pre-rollout:
+    # - run:
+    #     name: drush sql-dump
+    #     # Takes a pre-rollout backup of production sites only.
+    #     command: mkdir -p /app/web/sites/default/files/private/ && drush sql-dump --ordered-dump --gzip --result-file=/app/web/sites/default/files/private/pre-deploy-dump.sql.gz || true
+    #     service: cli
+    #     when: LAGOON_ENVIRONMENT_TYPE=="production"
 
   post-rollout:
-    # Enable once config sync has been setup.
     # - run:
     #     name: drush cim
+    #     # Enable once config sync has been setup.
     #     command: drush -y cim
     #     service: cli
     - run:
         name: drush updb
-        command: drush -y updb
+        # This will only run if the database exists.
+        command: |
+          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y updb; fi
         service: cli
     - run:
         name: drush cr
@@ -25,10 +29,9 @@ tasks:
         service: cli
 
 environments:
-  9.x:
-    # routes:
+  main:
     cronjobs:
-      - name: drush cron
-        schedule: "*/15 * * * *"
+      - name: drush hourly cron
+        schedule: "M * * * *"
         command: drush cron
         service: cli
