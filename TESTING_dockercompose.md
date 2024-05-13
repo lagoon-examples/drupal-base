@@ -76,11 +76,13 @@ docker compose exec -T cli bash -c "drush sql-cli < /app/test.sql"
 docker compose exec -T cli bash -c "rm test.sql*"
 
 # Should be able to show the drupal tables
-docker compose exec -T cli bash -c "drush sqlq \'show tables;\'" | grep users
+docker compose exec -T cli bash -c "echo U0hPVyBUQUJMRVM7 | base64 -d > /app/showtables.sql"
+docker compose exec -T cli bash -c "drush sqlq --file /app/showtables.sql" | grep users
 
 # Should be able to rebuild and persist the database
 docker compose build && docker compose up -d
-docker compose exec -T cli bash -c "drush sqlq \'show tables;\'" | grep users
+docker compose exec -T cli bash -c "echo U0hPVyBUQUJMRVM7 | base64 -d > /app/showtables.sql"
+docker compose exec -T cli bash -c "drush sqlq --file /app/showtables.sql" | grep users
 ```
 
 Destroy tests
