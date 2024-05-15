@@ -8,8 +8,8 @@ COPY assets /app/assets
 RUN --mount=type=cache,target=/tmp/cache composer install \
      --no-dev
 
-# COPY --exclude=100Mbfile . /app
-COPY . /app
+COPY --exclude=100Mbfile . /app
+# COPY . /app
 RUN mkdir -p -v -m775 /app/web/sites/default/files
 
 # Define where the Drupal Root is located
