@@ -12,17 +12,17 @@ tasks:
     #     when: LAGOON_ENVIRONMENT_TYPE=="production"
 
   post-rollout:
-    # - run:
-    #     name: drush cim
-    #     # Enable once config sync has been setup.
-    #     command: drush -y cim
-    #     service: cli
     - run:
         name: drush updb
         # This will only run if the database exists.
         command: |
           if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y updb; fi
         service: cli
+    # - run:
+    #     name: drush cim
+    #     # Enable once config sync has been setup.
+    #     command: drush -y cim
+    #     service: cli
     - run:
         name: drush cr
         command: drush -y cr
