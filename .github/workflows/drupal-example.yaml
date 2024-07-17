@@ -45,13 +45,10 @@ jobs:
         docker compose pull --ignore-pull-failures
     - name: Install test harness
       run: |
-        yarn add leia-parser mocha chai@4 command-line-test
-    - name: Generate test files
-      run: |
-        yarn leia "TESTING*.md" test -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests' --split-file
+        yarn add @lando/leia
     - name: Run docker compose tests
       run: |
-        yarn mocha --timeout 900000 test/*compose*.func.js
+        yarn leia "TESTING_dockercompose.md" -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests'
     # - name: Run Lando tests
     #   timeout-minutes: 10
     #   continue-on-error: true
