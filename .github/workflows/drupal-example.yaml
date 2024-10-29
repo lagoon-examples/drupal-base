@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - 'main'
+      - 'versioned'
       - 'dev'
   pull_request:
     branches:
       - 'main'
+      - 'versioned'
 
 jobs:
   test-suite:
