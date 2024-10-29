@@ -1,6 +1,7 @@
 {
   "baseBranches": [
-    "main"
+    "main",
+    "versioned"
   ],
   "extends": ["config:base"],
   "automerge": true,
@@ -11,6 +12,7 @@
     {
       "datasources": ["packagist"],
       "updateTypes": ["patch", "minor"],
+      "matchBaseBranches": ["main"],
       "packageNames": [
         "drupal/core-dev-pinned",
         "drupal/core-recommended",
@@ -22,6 +24,7 @@
     {
       "datasources": ["packagist"],
       "updateTypes": ["major"],
+      "matchBaseBranches": ["main"],
       "packageNames": [
         "drupal/core-dev-pinned",
         "drupal/core-recommended",
@@ -32,7 +35,13 @@
     },
     {
       "matchManagers": ["github-actions"],
+      "matchBaseBranches": ["main"],
       "groupName": "GitHub actions"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchBaseBranches": ["versioned"],
+      "versioning": "semver"
     }
   ]
 }
