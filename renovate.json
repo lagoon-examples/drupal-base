@@ -41,7 +41,8 @@
     {
       "matchDatasources": ["docker"],
       "matchBaseBranches": ["versioned"],
-      "versioning": "semver"
+      "versioning": "semver",
+      "groupName": "uselagoon images"
     }
   ]
 }
