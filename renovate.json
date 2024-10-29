@@ -3,17 +3,26 @@
     "main",
     "versioned"
   ],
-  "extends": ["config:base"],
+  "extends": [
+    "config:recommended"
+  ],
   "automerge": true,
   "automergeType": "pr",
   "dependencyDashboard": true,
   "prHourlyLimit": 0,
   "packageRules": [
     {
-      "datasources": ["packagist"],
-      "updateTypes": ["patch", "minor"],
-      "matchBaseBranches": ["main"],
-      "packageNames": [
+      "matchDatasources": [
+        "packagist"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],
+      "matchPackageNames": [
         "drupal/core-dev-pinned",
         "drupal/core-recommended",
         "drupal/core-composer-scaffold",
@@ -22,10 +31,16 @@
       "groupName": "Drupal Core"
     },
     {
-      "datasources": ["packagist"],
-      "updateTypes": ["major"],
-      "matchBaseBranches": ["main"],
-      "packageNames": [
+      "matchDatasources": [
+        "packagist"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],
+      "matchPackageNames": [
         "drupal/core-dev-pinned",
         "drupal/core-recommended",
         "drupal/core-composer-scaffold",
@@ -34,13 +49,21 @@
       "enabled": false
     },
     {
-      "matchManagers": ["github-actions"],
-      "matchBaseBranches": ["main"],
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],
       "groupName": "GitHub actions"
     },
     {
-      "matchDatasources": ["docker"],
-      "matchBaseBranches": ["versioned"],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchBaseBranches": [
+        "versioned"
+      ],
       "versioning": "semver",
       "groupName": "uselagoon images"
     }
