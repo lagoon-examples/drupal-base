@@ -66,6 +66,16 @@
       ],
       "versioning": "semver",
       "groupName": "uselagoon images"
+    },
+    {
+      "matchManagers": [
+        "github-actions",
+        "composer"
+      ],
+      "matchBaseBranches": [
+        "versioned"
+      ],
+      "enabled": false
     }
   ]
 }
