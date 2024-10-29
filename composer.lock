@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28743c273f38f8e85d5f73c06ff6b182",
+    "content-hash": "50fb2d57cac32292ad03299a2b9318e7",
     "packages": [
         {
             "name": "amazeeio/drupal_integrations",
@@ -1459,7 +1459,7 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "10.3.6",
+            "version": "11.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
