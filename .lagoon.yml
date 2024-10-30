@@ -35,6 +35,9 @@ tasks:
 
 environments:
   main:
+    routes:
+    - "":
+      cert-manager.io/cluster-issuer: le
     cronjobs:
       - name: drush hourly cron
         schedule: "M * * * *"
