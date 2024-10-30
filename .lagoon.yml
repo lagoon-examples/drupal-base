@@ -34,10 +34,7 @@ tasks:
         shell: bash
 
 environments:
-  main:
-    ingress:
-      annotations:
-        cert-manager.io/cluster-issuer: "le"            
+  main: 
     cronjobs:
       - name: drush hourly cron
         schedule: "M * * * *"
