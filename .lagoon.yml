@@ -35,11 +35,6 @@ tasks:
 
 environments:
   main:
-    routes:
-    - nginx:
-      - apps.caas.fr:
-        annotations:
-          cert-manager.io/cluster-issuer: le
     cronjobs:
       - name: drush hourly cron
         schedule: "M * * * *"
