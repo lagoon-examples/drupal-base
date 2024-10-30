@@ -37,8 +37,8 @@ environments:
   main:
     routes:
     - 'app.caas.fr':
-      annotations:
-        cert-manager.io/cluster-issuer: le
+        annotations:
+          cert-manager.io/cluster-issuer: le
     cronjobs:
       - name: drush hourly cron
         schedule: "M * * * *"
