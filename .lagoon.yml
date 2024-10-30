@@ -36,7 +36,8 @@ tasks:
 environments:
   main:
     routes:
-    - 'app.caas.fr':
+    - nginx:
+      - apps.caas.fr:
         annotations:
           cert-manager.io/cluster-issuer: le
     cronjobs:
