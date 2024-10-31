@@ -1,5 +1,16 @@
 
-# Build 1
+
+current: lagoonadmin
+default: lagoonadmin
+lagoons:
+  lagoonadmin:
+    graphql: https://api.apps.caas.fr/graphql
+    hostname: 135.236.180.136
+    ui: https://lagoon.apps.caas.fr
+    kibana: ""
+    port: "2020"
+
+
 docker-compose-yaml: docker-compose.yml
 
 project: drupal-base
