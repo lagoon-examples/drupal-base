@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b047ae9ea9ca920ef0b0a4c6c6aac74",
+    "content-hash": "2d48556fdd0a8acc8596d9e2bb6a001a",
     "packages": [
         {
             "name": "amazeeio/drupal_integrations",
@@ -1639,16 +1639,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "13.3.1",
+            "version": "13.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "60a6d554cc56115e45f26b6b3d2447f46480b7df"
+                "reference": "bd2351763eea343e7d56f5cbb81ac1855adcf8fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/60a6d554cc56115e45f26b6b3d2447f46480b7df",
-                "reference": "60a6d554cc56115e45f26b6b3d2447f46480b7df",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/bd2351763eea343e7d56f5cbb81ac1855adcf8fd",
+                "reference": "bd2351763eea343e7d56f5cbb81ac1855adcf8fd",
                 "shasum": ""
             },
             "require": {
@@ -1775,7 +1775,7 @@
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "security": "https://github.com/drush-ops/drush/security/advisories",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/13.3.1"
+                "source": "https://github.com/drush-ops/drush/tree/13.3.2"
             },
             "funding": [
                 {
@@ -1783,7 +1783,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-29T19:48:59+00:00"
+            "time": "2024-10-31T17:06:17+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -2287,7 +2287,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.29.0",
+            "version": "v11.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -2342,7 +2342,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.29.0",
+            "version": "v11.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -2388,7 +2388,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.29.0",
+            "version": "v11.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -2436,7 +2436,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.29.0",
+            "version": "v11.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
