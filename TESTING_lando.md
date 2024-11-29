@@ -73,6 +73,10 @@ lando lagoon --version | grep lagoon
 # Should have a running Drupal 9 site served by nginx on port 8080
 lando ssh -s cli -c "curl -kL http://nginx:8080" | grep "Welcome to Drush Site-Install"
 
+# Internal files are not served by Nginx.
+lando ssh -s cli -c "curl -sI http://nginx:8080/composer.json" | grep "404 Not Found"
+lando ssh -s cli -c "curl -sI http://nginx:8080/core/composer.json" | grep "404 Not Found"
+
 # Should be able to db-export and db-import the database
 lando db-export test.sql
 lando db-import test.sql.gz
