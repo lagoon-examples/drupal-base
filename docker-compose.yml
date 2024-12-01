@@ -1,3 +1,8 @@
+
+x-lagoon-project:
+  # Lagoon project name (leave `&lagoon-project` when you edit this)
+  &lagoon-project drupal-base
+
 x-volumes:
   &default-volumes
     # Define all volumes you would like to have real-time mounted into the docker containers
