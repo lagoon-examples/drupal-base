@@ -10,6 +10,9 @@
   "automergeType": "pr",
   "dependencyDashboard": true,
   "prHourlyLimit": 0,
+  "constraints": {
+    "php": "~8.3.1"
+  },
   "packageRules": [
     {
       "matchDatasources": [
