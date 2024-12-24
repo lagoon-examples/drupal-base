@@ -35,8 +35,8 @@ tasks:
 
 environments:
   main:
-    cronjobs:
-      - name: drush hourly cron
-        schedule: "M * * * *"
-        command: drush cron
-        service: cli
+    routes:
+      - nginx:
+        - example.lagoon.fubarhouse.io:
+            tls-acme: 'false'
+            insecure: Allow
