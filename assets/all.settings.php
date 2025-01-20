@@ -14,6 +14,20 @@
 // folder outside this subfolder for an advanced security measure: '../config/sync'.
 $settings['config_sync_directory'] = '../config/sync';
 
+
+// Database connection settings to enforce utf8mb4_general_ci.
+$databases['default']['default'] = [
+    'driver' => 'mysql',
+    'database' => getenv('MARIADB_DATABASE'),
+    'username' => getenv('MARIADB_USERNAME'),
+    'password' => getenv('MARIADB_PASSWORD'),
+    'host' => getenv('MARIADB_HOST'),
+    'port' => getenv('MARIADB_PORT'),
+    'prefix' => '',
+    'charset' => 'utf8mb4',
+    'collation' => 'utf8mb4_general_ci',
+];
+
 if (getenv('LAGOON_ENVIRONMENT_TYPE') !== 'production') {
     /**
      * Skip file system permissions hardening.
