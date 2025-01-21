@@ -1,4 +1,4 @@
-FROM uselagoon/php-8.3-cli-drupal:24.12.0
+FROM uselagoon/php-8.3-cli-drupal:25.1.0
 
 COPY composer.* /app/
 COPY assets /app/assets
