@@ -1,7 +1,7 @@
 ARG CLI_IMAGE
 FROM ${CLI_IMAGE} AS cli
 
-FROM uselagoon/nginx-drupal:25.1.0
+FROM uselagoon/nginx-drupal:25.2.0
 
 COPY --from=cli /app /app
 
