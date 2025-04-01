@@ -12,6 +12,10 @@
     ],
     "repositories": [
         {
+            "type": "vcs",
+            "url": "git@github.com:arnested/drush.git"
+        },
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
@@ -24,7 +28,7 @@
         "drupal/core-project-message": "10.4.5",
         "drupal/core-recommended": "10.4.5",
         "drupal/lagoon_logs": "3.0.1",
-        "drush/drush": "13.4.0"
+        "drush/drush": "sql-extra-option-dev"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -36,11 +40,12 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "php-http/discovery": true
+            "tbachert/spi": true
         }
     },
     "extra": {
@@ -60,7 +65,8 @@
                 "amazeeio/drupal_integrations"
             ],
             "file-mapping": {
-                "[web-root]/sites/default/all.settings.php": "assets/all.settings.php"
+                "[web-root]/sites/default/all.settings.php": "assets/all.settings.php",
+                "/home/.drush/drush.yml": "assets/drush.yml"
             },
             "locations": {
                 "web-root": "web/"
