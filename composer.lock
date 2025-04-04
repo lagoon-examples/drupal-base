@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39ce3e296145588ac5aa1c552120540f",
+    "content-hash": "262774c7eca13835b2c3bb1e657b57df",
     "packages": [
         {
             "name": "amazeeio/drupal_integrations",
@@ -1637,16 +1637,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "13.4.0",
+            "version": "13.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "5412e5a5652ea3003ed65dfe3653bbecfeeba42e"
+                "reference": "8aae4e5a5a4ce1f117d1ef9d86b3a4b4c63df650"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/5412e5a5652ea3003ed65dfe3653bbecfeeba42e",
-                "reference": "5412e5a5652ea3003ed65dfe3653bbecfeeba42e",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/8aae4e5a5a4ce1f117d1ef9d86b3a4b4c63df650",
+                "reference": "8aae4e5a5a4ce1f117d1ef9d86b3a4b4c63df650",
                 "shasum": ""
             },
             "require": {
@@ -1773,7 +1773,7 @@
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "security": "https://github.com/drush-ops/drush/security/advisories",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/13.4.0"
+                "source": "https://github.com/drush-ops/drush/tree/13.5.0"
             },
             "funding": [
                 {
@@ -1781,7 +1781,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-18T16:10:10+00:00"
+            "time": "2025-04-04T04:11:16+00:00"
         },
         {
             "name": "egulias/email-validator",
