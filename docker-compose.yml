@@ -57,8 +57,6 @@ services:
       lando.type: nginx-drupal
     ports:
       - "8080" # exposes the port 8080 with a random local port, find it with `docker-compose port nginx 8080`
-      - "8081" 
-      - "8082"
     << : [*default-volumes, *default-user]
     depends_on:
       - cli # basically just tells docker-compose to build the cli first
