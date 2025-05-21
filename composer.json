@@ -20,11 +20,11 @@
         "amazeeio/drupal_integrations": "0.5.0",
         "composer/installers": "2.3.0",
         "cweagans/composer-patches": "1.7.3",
-        "drupal/core-composer-scaffold": "10.4.1",
-        "drupal/core-project-message": "10.4.1",
-        "drupal/core-recommended": "10.4.1",
+        "drupal/core-composer-scaffold": "10.4.7",
+        "drupal/core-project-message": "10.4.7",
+        "drupal/core-recommended": "10.4.7",
         "drupal/lagoon_logs": "3.0.1",
-        "drush/drush": "13.3.3"
+        "drush/drush": "13.6.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -36,11 +36,12 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "php-http/discovery": true
+            "tbachert/spi": true
         }
     },
     "extra": {
@@ -68,6 +69,6 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev-pinned": "10.4.1"
+        "drupal/core-dev-pinned": "10.4.7"
     }
 }
