@@ -24,7 +24,13 @@ tasks:
 #         command: drush -y cr
 #         service: cli
 
-# environments:
+environments:
+  main:
+    routes:
+      - nginx:
+        - nginx.main.brittany-route-test-some-long-namespace-name-123.amazeeio.review:
+            tls-acme: 'true'
+            insecure: Redirect
 #   9.x:
 #     # routes:
 #     cronjobs:
