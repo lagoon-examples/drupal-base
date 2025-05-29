@@ -3,26 +3,15 @@ docker-compose-yaml: docker-compose.yml
 project: drupal-base
 
 tasks:
-#   pre-rollout:
-#     - run:
-#         name: drush sql-dump
-#         command: mkdir -p /app/web/sites/default/files/private/ && drush sql-dump --ordered-dump --gzip --result-file=/app/web/sites/default/files/private/pre-deploy-dump.sql.gz || true
-#         service: cli
+  pre-rollout:
+    # - run:
+    #     name: drush sql-dump
+    #     # Takes a pre-rollout backup of production sites only.
+    #     command: mkdir -p /app/web/sites/default/files/private/ && drush sql-dump --ordered-dump --gzip --result-file=/app/web/sites/default/files/private/pre-deploy-dump.sql.gz || true
+    #     service: cli
+    #     when: LAGOON_ENVIRONMENT_TYPE=="production"
 
   post-rollout:
-#     # Enable once config sync has been setup.
-#     # - run:
-#     #     name: drush cim
-#     #     command: drush -y cim
-#     #     service: cli
-#     - run:
-#         name: drush updb
-#         command: drush -y updb
-#         service: cli
-#     - run:
-#         name: drush cr
-#         command: drush -y cr
-#         service: cli
 
 environments:
   main:
@@ -31,10 +20,3 @@ environments:
         - nginx.main.brittany-route-test-some-long-namespace-name-123.amazeeio.review:
             tls-acme: 'true'
             insecure: Redirect
-#   9.x:
-#     # routes:
-#     cronjobs:
-#       - name: drush cron
-#         schedule: "*/15 * * * *"
-#         command: drush cron
-#         service: cli

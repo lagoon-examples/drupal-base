@@ -9,10 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Merge main -> php81
+      - name: Merge main -> versioned
         uses: devmasx/merge-branch@master
         with:
           type: now
           from_branch: main
-          target_branch: php81
+          target_branch: versioned
           github_token: ${{ github.token }}

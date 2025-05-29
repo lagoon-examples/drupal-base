@@ -17,15 +17,14 @@
         }
     ],
     "require": {
-        "amazeeio/drupal_integrations": "0.4.0",
-        "composer/installers": "2.2.0",
+        "amazeeio/drupal_integrations": "0.5.0",
+        "composer/installers": "2.3.0",
         "cweagans/composer-patches": "1.7.3",
-        "drupal/core-composer-scaffold": "10.2.3",
-        "drupal/core-project-message": "10.2.3",
-        "drupal/core-recommended": "10.2.3",
-        "drupal/lagoon_logs": "3.0.0",
-        "drush/drush": "12.4.3",
-        "zaporylie/composer-drupal-optimizations": "1.2.0"
+        "drupal/core-composer-scaffold": "10.4.7",
+        "drupal/core-project-message": "10.4.7",
+        "drupal/core-recommended": "10.4.7",
+        "drupal/lagoon_logs": "3.0.1",
+        "drush/drush": "13.6.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -33,20 +32,20 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config":{
-        "platform": {"php": "8.1.12"},
         "sort-packages": true,
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "zaporylie/composer-drupal-optimizations": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "php-http/discovery": true
+            "tbachert/spi": true
         }
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
@@ -70,6 +69,6 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev-pinned": "10.2.3"
+        "drupal/core-dev-pinned": "10.4.7"
     }
 }
