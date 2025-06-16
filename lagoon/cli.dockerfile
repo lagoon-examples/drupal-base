@@ -1,5 +1,6 @@
 FROM uselagoon/php-8.3-cli-drupal:latest
 
+RUN apk add --no-cache nginx nginx-mod-http-brotli
 COPY lagoon/nginx.conf /etc/nginx/nginx.conf
 
 COPY composer.* /app/
