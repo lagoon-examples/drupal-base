@@ -1,5 +1,7 @@
 FROM uselagoon/php-8.3-cli-drupal:latest
 
+COPY lagoon/nginx.conf /etc/nginx/nginx.conf
+
 COPY composer.* /app/
 COPY assets /app/assets
 RUN composer install --no-dev
