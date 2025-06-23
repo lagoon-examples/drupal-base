@@ -8,8 +8,8 @@ dependencies with [Composer](https://getcomposer.org/). It is based on the [orig
 ## Included Services
 
 This example contains the following services:
-* Drupal 10.x
-* PHP 8
+* Drupal 11.x
+* PHP 8.x
 * NGINX
 * MariaDB 10.11
 
