@@ -51,6 +51,8 @@ services:
       dockerfile: lagoon/nginx.dockerfile
       args:
         CLI_IMAGE: *cli-image # Inject the name of the cli image
+      additional_contexts:
+        cli: 'service:cli' # Ensure cli is built first
     labels:
       lagoon.type: nginx-php-persistent
       lagoon.persistent: /app/web/sites/default/files/ # define where the persistent storage should be mounted too
@@ -59,7 +61,7 @@ services:
       - "8080" # exposes the port 8080 with a random local port, find it with `docker-compose port nginx 8080`
     << : [*default-volumes, *default-user]
     depends_on:
-      - cli # basically just tells docker-compose to build the cli first
+     - cli
     environment:
       << : *default-environment # loads the defined environment variables from the top
       LAGOON_LOCALDEV_URL: *default-url
@@ -73,6 +75,8 @@ services:
       dockerfile: lagoon/php.dockerfile
       args:
         CLI_IMAGE: *cli-image
+      additional_contexts:
+        cli: 'service:cli' # Ensure cli is built first
     labels:
       lagoon.type: nginx-php-persistent
       lagoon.name: nginx # we want this service be part of the nginx pod in Lagoon
@@ -80,7 +84,7 @@ services:
       lando.type: php-fpm
     << : [*default-volumes, *default-user]
     depends_on:
-      - cli # basically just tells docker-compose to build the cli first
+      - cli
     environment:
       << : *default-environment # loads the defined environment variables from the top
 
