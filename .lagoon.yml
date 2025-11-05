@@ -14,6 +14,13 @@ tasks:
   post-rollout:
     - run:
         name: drush updb
+        # This will only run if the database does NOT exists.
+        command: |
+          if [[ $(drush status --field=Database) != "Connected" ]]; then drush sql-sync -y @lagoon.michidemo1-main @self; fi
+        service: cli
+        shell: bash
+    - run:
+        name: drush updb
         # This will only run if the database exists.
         command: |
           if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y updb; fi
