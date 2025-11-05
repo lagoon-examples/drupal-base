@@ -1,6 +1,6 @@
 docker-compose-yaml: docker-compose.yml
 
-project: drupal-base
+project: michidemo1
 
 tasks:
   pre-rollout:
