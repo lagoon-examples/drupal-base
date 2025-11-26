@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ad049c6acc0eff91018476da7bdf3a6",
+    "content-hash": "0d3f6e9ba4e1ed3b54d1140df736fffb",
     "packages": [
         {
             "name": "amazeeio/drupal_integrations",
@@ -1667,36 +1667,36 @@
         },
         {
             "name": "drush/drush",
-            "version": "13.6.2",
+            "version": "13.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "635fce5f8223bae5c39495ee5709e993127ca413"
+                "reference": "70de523716de1125233de17e172a38c4ecdde397"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/635fce5f8223bae5c39495ee5709e993127ca413",
-                "reference": "635fce5f8223bae5c39495ee5709e993127ca413",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/70de523716de1125233de17e172a38c4ecdde397",
+                "reference": "70de523716de1125233de17e172a38c4ecdde397",
                 "shasum": ""
             },
             "require": {
                 "chi-teck/drupal-code-generator": "^3.6 || ^4@alpha",
                 "composer-runtime-api": "^2.2",
                 "composer/semver": "^1.4 || ^3",
-                "consolidation/annotated-command": "^4.9.2",
-                "consolidation/config": "^2.1.2 || ^3",
+                "consolidation/annotated-command": "^4.10.2",
+                "consolidation/config": "^2.1.2 || ^3.1.1",
                 "consolidation/filter-via-dot-access-data": "^2.0.2",
-                "consolidation/output-formatters": "^4.3.2",
-                "consolidation/robo": "^4.0.6 || ^5",
-                "consolidation/site-alias": "^4",
-                "consolidation/site-process": "^5.2.0",
+                "consolidation/output-formatters": "^4.6.1",
+                "consolidation/robo": "^4.0.6 || ^5.1.0",
+                "consolidation/site-alias": "^4.1.1",
+                "consolidation/site-process": "^5.4.2",
                 "dflydev/dot-access-data": "^3.0.2",
                 "ext-dom": "*",
-                "grasmash/yaml-cli": "^3.1",
+                "grasmash/yaml-cli": "^3.2",
                 "guzzlehttp/guzzle": "^7.0",
                 "laravel/prompts": "^0.3.5",
                 "league/container": "^4.2",
-                "php": ">=8.2",
+                "php": ">=8.3",
                 "psy/psysh": "~0.12",
                 "symfony/event-dispatcher": "^6 || ^7",
                 "symfony/filesystem": "^6.1 || ^7",
@@ -1705,19 +1705,19 @@
                 "symfony/yaml": "^6.0 || ^7"
             },
             "conflict": {
-                "drupal/core": "< 10.2",
+                "drupal/core": "< 10.4",
                 "drupal/migrate_run": "*",
                 "drupal/migrate_tools": "<= 5"
             },
             "require-dev": {
                 "composer/installers": "^2",
                 "cweagans/composer-patches": "~1.7.3",
-                "drupal/core-recommended": "^10.3.0 || 11.x-dev",
+                "drupal/core-recommended": "^10.4.0 || 11.x-dev",
                 "drupal/semver_example": "2.3.0",
                 "jetbrains/phpstorm-attributes": "^1.0",
-                "mglaman/phpstan-drupal": "^1.2",
+                "mglaman/phpstan-drupal": "^2",
                 "phpunit/phpunit": "^9 || ^10 || ^11",
-                "rector/rector": "^1",
+                "rector/rector": "^2",
                 "squizlabs/php_codesniffer": "^3.7"
             },
             "bin": [
@@ -1726,6 +1726,7 @@
             ],
             "type": "library",
             "extra": {
+                "patches-file": "composer.patches.json",
                 "installer-paths": {
                     "sut/core": [
                         "type:drupal-core"
@@ -1803,7 +1804,7 @@
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "security": "https://github.com/drush-ops/drush/security/advisories",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/13.6.2"
+                "source": "https://github.com/drush-ops/drush/tree/13.7.0"
             },
             "funding": [
                 {
@@ -1811,7 +1812,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-04T21:21:58+00:00"
+            "time": "2025-11-25T18:23:02+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -12405,5 +12406,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
