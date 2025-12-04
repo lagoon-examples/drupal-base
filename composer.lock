@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d3f6e9ba4e1ed3b54d1140df736fffb",
+    "content-hash": "e20de017996732de0ba6b9e63f3abd2b",
     "packages": [
         {
             "name": "amazeeio/drupal_integrations",
@@ -1264,16 +1264,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "11.2.8",
+            "version": "11.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "e9c111ea8f26f751797fbf6a918f845730fc95ee"
+                "reference": "31bb7212f663c09833f85fa730e58eea48705f55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/e9c111ea8f26f751797fbf6a918f845730fc95ee",
-                "reference": "e9c111ea8f26f751797fbf6a918f845730fc95ee",
+                "url": "https://api.github.com/repos/drupal/core/zipball/31bb7212f663c09833f85fa730e58eea48705f55",
+                "reference": "31bb7212f663c09833f85fa730e58eea48705f55",
                 "shasum": ""
             },
             "require": {
@@ -1430,13 +1430,13 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/11.2.8"
+                "source": "https://github.com/drupal/core/tree/11.2.9"
             },
-            "time": "2025-11-12T21:53:29+00:00"
+            "time": "2025-12-04T08:39:08+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "11.2.8",
+            "version": "11.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -1480,13 +1480,13 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/11.2.8"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/11.2.9"
             },
             "time": "2025-05-05T16:18:58+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "11.2.8",
+            "version": "11.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -1521,22 +1521,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/11.3.0-alpha1"
+                "source": "https://github.com/drupal/core-project-message/tree/11.3.0-beta1"
             },
             "time": "2025-02-03T10:59:29+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "11.2.8",
+            "version": "11.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "96abf0e25d757131141c5997f5604011e13cfe01"
+                "reference": "05ad85164d1a7700f931a34ed69bb83ea0d615b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/96abf0e25d757131141c5997f5604011e13cfe01",
-                "reference": "96abf0e25d757131141c5997f5604011e13cfe01",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/05ad85164d1a7700f931a34ed69bb83ea0d615b1",
+                "reference": "05ad85164d1a7700f931a34ed69bb83ea0d615b1",
                 "shasum": ""
             },
             "require": {
@@ -1545,7 +1545,7 @@
                 "doctrine/annotations": "~2.0.2",
                 "doctrine/deprecations": "~1.1.5",
                 "doctrine/lexer": "~2.1.1",
-                "drupal/core": "11.2.8",
+                "drupal/core": "11.2.9",
                 "egulias/email-validator": "~4.0.4",
                 "guzzlehttp/guzzle": "~7.9.3",
                 "guzzlehttp/promises": "~2.2.0",
@@ -1565,36 +1565,36 @@
                 "psr/log": "~3.0.2",
                 "ralouphie/getallheaders": "~3.0.3",
                 "revolt/event-loop": "~v1.0.7",
-                "symfony/console": "~v7.3.6",
-                "symfony/dependency-injection": "~v7.3.6",
+                "symfony/console": "~v7.3.0",
+                "symfony/dependency-injection": "~v7.3.0",
                 "symfony/deprecation-contracts": "~v3.6.0",
-                "symfony/error-handler": "~v7.3.6",
-                "symfony/event-dispatcher": "~v7.3.3",
+                "symfony/error-handler": "~v7.3.0",
+                "symfony/event-dispatcher": "~v7.3.0",
                 "symfony/event-dispatcher-contracts": "~v3.6.0",
-                "symfony/filesystem": "~v7.3.6",
-                "symfony/finder": "~v7.3.5",
-                "symfony/http-foundation": "~v7.3.7",
-                "symfony/http-kernel": "~v7.3.7",
-                "symfony/mailer": "~v7.3.5",
-                "symfony/mime": "~v7.3.4",
-                "symfony/polyfill-ctype": "~v1.33.0",
-                "symfony/polyfill-iconv": "~v1.33.0",
-                "symfony/polyfill-intl-grapheme": "~v1.33.0",
-                "symfony/polyfill-intl-idn": "~v1.33.0",
-                "symfony/polyfill-intl-normalizer": "~v1.33.0",
-                "symfony/polyfill-mbstring": "~v1.33.0",
-                "symfony/polyfill-php84": "~v1.33.0",
-                "symfony/process": "~v7.3.4",
+                "symfony/filesystem": "~v7.3.0",
+                "symfony/finder": "~v7.3.0",
+                "symfony/http-foundation": "~v7.3.0",
+                "symfony/http-kernel": "~v7.3.0",
+                "symfony/mailer": "~v7.3.0",
+                "symfony/mime": "~v7.3.0",
+                "symfony/polyfill-ctype": "~v1.32.0",
+                "symfony/polyfill-iconv": "~v1.32.0",
+                "symfony/polyfill-intl-grapheme": "~v1.32.0",
+                "symfony/polyfill-intl-idn": "~v1.32.0",
+                "symfony/polyfill-intl-normalizer": "~v1.32.0",
+                "symfony/polyfill-mbstring": "~v1.32.0",
+                "symfony/polyfill-php84": "~v1.32.0",
+                "symfony/process": "~v7.3.0",
                 "symfony/psr-http-message-bridge": "~v7.3.0",
-                "symfony/routing": "~v7.3.6",
-                "symfony/serializer": "~v7.3.5",
-                "symfony/service-contracts": "~v3.6.1",
-                "symfony/string": "~v7.3.4",
-                "symfony/translation-contracts": "~v3.6.1",
-                "symfony/validator": "~v7.3.7",
-                "symfony/var-dumper": "~v7.3.5",
-                "symfony/var-exporter": "~v7.3.4",
-                "symfony/yaml": "~v7.3.5",
+                "symfony/routing": "~v7.3.0",
+                "symfony/serializer": "~v7.3.0",
+                "symfony/service-contracts": "~v3.6.0",
+                "symfony/string": "~v7.3.0",
+                "symfony/translation-contracts": "~v3.6.0",
+                "symfony/validator": "~v7.3.0",
+                "symfony/var-dumper": "~v7.3.0",
+                "symfony/var-exporter": "~v7.3.0",
+                "symfony/yaml": "~v7.3.0",
                 "twig/twig": "~v3.21.1"
             },
             "conflict": {
@@ -1607,9 +1607,9 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/11.2.8"
+                "source": "https://github.com/drupal/core-recommended/tree/11.2.9"
             },
-            "time": "2025-11-12T21:53:29+00:00"
+            "time": "2025-12-04T08:39:08+00:00"
         },
         {
             "name": "drupal/lagoon_logs",
@@ -4816,7 +4816,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.33.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -4875,7 +4875,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -4887,10 +4887,6 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -4899,7 +4895,7 @@
         },
         {
             "name": "symfony/polyfill-iconv",
-            "version": "v1.33.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-iconv.git",
@@ -4959,7 +4955,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -4971,10 +4967,6 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -4983,16 +4975,16 @@
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
-            "version": "v1.33.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-                "reference": "380872130d3a5dd3ace2f4010d95125fde5d5c70"
+                "reference": "b9123926e3b7bc2f98c02ad54f6a4b02b91a8abe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/380872130d3a5dd3ace2f4010d95125fde5d5c70",
-                "reference": "380872130d3a5dd3ace2f4010d95125fde5d5c70",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/b9123926e3b7bc2f98c02ad54f6a4b02b91a8abe",
+                "reference": "b9123926e3b7bc2f98c02ad54f6a4b02b91a8abe",
                 "shasum": ""
             },
             "require": {
@@ -5041,7 +5033,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -5053,19 +5045,15 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-06-27T09:58:17+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.33.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
@@ -5128,7 +5116,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -5140,10 +5128,6 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -5152,7 +5136,7 @@
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.33.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
@@ -5213,7 +5197,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -5225,10 +5209,6 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -5237,7 +5217,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.33.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -5298,7 +5278,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -5307,10 +5287,6 @@
                 },
                 {
                     "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
                     "type": "github"
                 },
                 {
@@ -5482,16 +5458,16 @@
         },
         {
             "name": "symfony/polyfill-php84",
-            "version": "v1.33.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php84.git",
-                "reference": "d8ced4d875142b6a7426000426b8abc631d6b191"
+                "reference": "000df7860439609837bbe28670b0be15783b7fbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php84/zipball/d8ced4d875142b6a7426000426b8abc631d6b191",
-                "reference": "d8ced4d875142b6a7426000426b8abc631d6b191",
+                "url": "https://api.github.com/repos/symfony/polyfill-php84/zipball/000df7860439609837bbe28670b0be15783b7fbf",
+                "reference": "000df7860439609837bbe28670b0be15783b7fbf",
                 "shasum": ""
             },
             "require": {
@@ -5538,7 +5514,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php84/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-php84/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -5550,15 +5526,11 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-06-24T13:30:11+00:00"
+            "time": "2025-02-20T12:04:08+00:00"
         },
         {
             "name": "symfony/process",
@@ -7613,16 +7585,16 @@
         },
         {
             "name": "drupal/core-dev-pinned",
-            "version": "11.2.8",
+            "version": "11.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev-pinned.git",
-                "reference": "87ac24facd79c93e830229e8c740be9ca5d0b7ea"
+                "reference": "cb76c2d4cb0c94160d7973e18d11e3d9035834ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-dev-pinned/zipball/87ac24facd79c93e830229e8c740be9ca5d0b7ea",
-                "reference": "87ac24facd79c93e830229e8c740be9ca5d0b7ea",
+                "url": "https://api.github.com/repos/drupal/core-dev-pinned/zipball/cb76c2d4cb0c94160d7973e18d11e3d9035834ef",
+                "reference": "cb76c2d4cb0c94160d7973e18d11e3d9035834ef",
                 "shasum": ""
             },
             "require": {
@@ -7640,7 +7612,7 @@
                 "dealerdirect/phpcodesniffer-composer-installer": "v1.0.0",
                 "doctrine/instantiator": "2.0.0",
                 "drupal/coder": "8.3.30",
-                "drupal/core": "11.2.8",
+                "drupal/core": "11.2.9",
                 "google/protobuf": "v4.31.1",
                 "justinrainbow/json-schema": "6.4.2",
                 "lullabot/mink-selenium2-driver": "v1.7.4",
@@ -7704,10 +7676,10 @@
                 "slevomat/coding-standard": "8.18.1",
                 "squizlabs/php_codesniffer": "3.13.0",
                 "staabm/side-effects-detector": "1.0.5",
-                "symfony/browser-kit": "v7.3.6",
-                "symfony/css-selector": "v7.3.6",
-                "symfony/dom-crawler": "v7.3.3",
-                "symfony/lock": "v7.3.4",
+                "symfony/browser-kit": "v7.3.0",
+                "symfony/css-selector": "v7.3.0",
+                "symfony/dom-crawler": "v7.3.0",
+                "symfony/lock": "v7.3.0",
                 "tbachert/spi": "v1.0.3",
                 "theseer/tokenizer": "1.2.3",
                 "webflo/drupal-finder": "1.3.1",
@@ -7723,9 +7695,9 @@
             ],
             "description": "Pinned require-dev dependencies from drupal/drupal; use in addition to drupal/core-recommended to run tests from drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-dev-pinned/tree/11.2.8"
+                "source": "https://github.com/drupal/core-dev-pinned/tree/11.2.9"
             },
-            "time": "2025-11-12T21:53:29+00:00"
+            "time": "2025-12-04T08:39:08+00:00"
         },
         {
             "name": "google/protobuf",
@@ -11656,16 +11628,16 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v7.3.6",
+            "version": "v7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "e9a9fd604296b17bf90939c3647069f1f16ef04e"
+                "reference": "5384291845e74fd7d54f3d925c4a86ce12336593"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/e9a9fd604296b17bf90939c3647069f1f16ef04e",
-                "reference": "e9a9fd604296b17bf90939c3647069f1f16ef04e",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/5384291845e74fd7d54f3d925c4a86ce12336593",
+                "reference": "5384291845e74fd7d54f3d925c4a86ce12336593",
                 "shasum": ""
             },
             "require": {
@@ -11704,7 +11676,7 @@
             "description": "Simulates the behavior of a web browser, allowing you to make requests, click on links and submit forms programmatically",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/browser-kit/tree/v7.3.6"
+                "source": "https://github.com/symfony/browser-kit/tree/v7.3.0"
             },
             "funding": [
                 {
@@ -11716,28 +11688,24 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-05T07:57:47+00:00"
+            "time": "2025-03-05T10:15:41+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v7.3.6",
+            "version": "v7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "84321188c4754e64273b46b406081ad9b18e8614"
+                "reference": "601a5ce9aaad7bf10797e3663faefce9e26c24e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/84321188c4754e64273b46b406081ad9b18e8614",
-                "reference": "84321188c4754e64273b46b406081ad9b18e8614",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/601a5ce9aaad7bf10797e3663faefce9e26c24e2",
+                "reference": "601a5ce9aaad7bf10797e3663faefce9e26c24e2",
                 "shasum": ""
             },
             "require": {
@@ -11773,7 +11741,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v7.3.6"
+                "source": "https://github.com/symfony/css-selector/tree/v7.3.0"
             },
             "funding": [
                 {
@@ -11785,28 +11753,24 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-10-29T17:24:25+00:00"
+            "time": "2024-09-25T14:21:43+00:00"
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v7.3.3",
+            "version": "v7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "efa076ea0eeff504383ff0dcf827ea5ce15690ba"
+                "reference": "0fabbc3d6a9c473b716a93fc8e7a537adb396166"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/efa076ea0eeff504383ff0dcf827ea5ce15690ba",
-                "reference": "efa076ea0eeff504383ff0dcf827ea5ce15690ba",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/0fabbc3d6a9c473b716a93fc8e7a537adb396166",
+                "reference": "0fabbc3d6a9c473b716a93fc8e7a537adb396166",
                 "shasum": ""
             },
             "require": {
@@ -11844,7 +11808,7 @@
             "description": "Eases DOM navigation for HTML and XML documents",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/dom-crawler/tree/v7.3.3"
+                "source": "https://github.com/symfony/dom-crawler/tree/v7.3.0"
             },
             "funding": [
                 {
@@ -11856,28 +11820,24 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-06T20:13:54+00:00"
+            "time": "2025-03-05T10:15:41+00:00"
         },
         {
             "name": "symfony/lock",
-            "version": "v7.3.4",
+            "version": "v7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/lock.git",
-                "reference": "e025f32cfd1fa8e3a4485a8d810544474aac26da"
+                "reference": "5bef45fb874b0454a616ac8091447a7982a438cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/lock/zipball/e025f32cfd1fa8e3a4485a8d810544474aac26da",
-                "reference": "e025f32cfd1fa8e3a4485a8d810544474aac26da",
+                "url": "https://api.github.com/repos/symfony/lock/zipball/5bef45fb874b0454a616ac8091447a7982a438cf",
+                "reference": "5bef45fb874b0454a616ac8091447a7982a438cf",
                 "shasum": ""
             },
             "require": {
@@ -11926,7 +11886,7 @@
                 "semaphore"
             ],
             "support": {
-                "source": "https://github.com/symfony/lock/tree/v7.3.4"
+                "source": "https://github.com/symfony/lock/tree/v7.3.0"
             },
             "funding": [
                 {
@@ -11938,15 +11898,11 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-09-11T10:12:26+00:00"
+            "time": "2025-04-20T20:19:01+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
