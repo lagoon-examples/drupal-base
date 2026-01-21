@@ -110,8 +110,8 @@ If you need to apply patches (depending on the project being modified, a pull
 request is often a better solution), you can do so with the
 [composer-patches](https://github.com/cweagans/composer-patches) plugin.
 
-To add a patch to drupal module foobar insert the patches section in the extra
-section of composer.json:
+To add a patch to drupal module `foobar`, insert the `patches` section in the
+`extra` section of composer.json:
 
 ```json
 "extra": {
@@ -122,6 +122,9 @@ section of composer.json:
     }
 }
 ```
+
+To apply locally stored patches, reference the path in `composer.json` and
+copy the directory containing the patch files in `lagoon/cli.dockerfile`.
 
 ### What are the "TESTING" files in this repo?
 
