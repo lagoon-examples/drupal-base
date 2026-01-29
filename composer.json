@@ -24,7 +24,7 @@
         "drupal/core-project-message": "11.3.2",
         "drupal/core-recommended": "11.3.2",
         "drupal/lagoon_logs": "3.0.1",
-        "drush/drush": "13.7.0"
+        "drush/drush": "13.7.1"
     },
     "conflict": {
         "drupal/drupal": "*"
