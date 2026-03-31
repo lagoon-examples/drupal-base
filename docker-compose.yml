@@ -89,6 +89,22 @@ services:
     environment:
       << : *default-environment # loads the defined environment variables from the top
 
+  php-fpm-exporter:
+    image: hipages/php-fpm_exporter:2.2.0
+    labels:
+      lagoon.type: nginx-php-persistent
+      lagoon.name: nginx
+    << : *default-user
+    depends_on:
+      - php
+    environment:
+      << : *default-environment
+      PHP_FPM_SCRAPE_URI: "tcp://127.0.0.1:9000/status"
+      PHP_FPM_WEB_LISTEN_ADDRESS: ":9253"
+      PHP_FPM_WEB_TELEMETRY_PATH: "/metrics"
+      PHP_FPM_FIX_PROCESS_COUNT: "true"
+      PHP_FPM_LOG_LEVEL: "info"
+
   mariadb:
     image: uselagoon/mariadb-10.11-drupal:latest
     labels:
