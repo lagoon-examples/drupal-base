@@ -69,6 +69,6 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev-pinned": "11.3.7"
+        "drupal/core-dev": "11.3.7"
     }
 }
