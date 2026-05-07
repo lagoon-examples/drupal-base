@@ -20,9 +20,9 @@
         "amazeeio/drupal_integrations": "0.5.0",
         "composer/installers": "2.3.0",
         "cweagans/composer-patches": "2.0.0",
-        "drupal/core-composer-scaffold": "11.3.8",
-        "drupal/core-project-message": "11.3.8",
-        "drupal/core-recommended": "11.3.8",
+        "drupal/core-composer-scaffold": "11.3.9",
+        "drupal/core-project-message": "11.3.9",
+        "drupal/core-recommended": "11.3.9",
         "drupal/lagoon_logs": "3.0.1",
         "drush/drush": "13.7.2"
     },
