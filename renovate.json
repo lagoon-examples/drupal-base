@@ -11,7 +11,7 @@
   "dependencyDashboard": true,
   "prHourlyLimit": 0,
   "constraints": {
-    "php": "~8.3.1"
+    "php": "~8.5.0"
   },
   "packageRules": [
     {
