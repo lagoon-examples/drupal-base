@@ -7,7 +7,7 @@ jobs:
   sync-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Merge main -> versioned
         uses: devmasx/merge-branch@master
