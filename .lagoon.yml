@@ -20,6 +20,18 @@ tasks:
         service: cli
         shell: bash
     - run:
+        name: drush config uuid sync
+        # Ensures the site UUID matches config/sync/system.site.yml before
+        # importing. Required when the site was installed independently
+        # (e.g. first Lagoon deploy) and the DB UUID differs from the repo.
+        command: |
+          if [[ $(drush status --field=Database) == "Connected" ]]; then
+            CONFIG_UUID=$(grep "^uuid:" /app/config/sync/system.site.yml | awk '{print $2}')
+            drush config-set system.site uuid "$CONFIG_UUID" -y
+          fi
+        service: cli
+        shell: bash
+    - run:
         name: drush cim
         command: |
           if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y cim; fi
