@@ -14,20 +14,21 @@ tasks:
   post-rollout:
     - run:
         name: drush install or update
-        # If the site UUID in the DB matches config/sync, this is an existing
-        # install — run updb then cim as normal.
-        # If the UUIDs differ (fresh environment, or site was installed
-        # independently), reinstall from config/sync via --existing-config.
-        # This avoids the demo content that `drush si standard` creates and
-        # which would block cim from deleting config entities.
+        # Runs updb then cim. If cim fails (e.g. a fresh environment that was
+        # installed with `drush si standard` and has blocking demo content),
+        # falls back to `drush si --existing-config` which drops the database
+        # and reinstalls cleanly from config/sync.
+        # On production environments the fallback is skipped and the task fails
+        # loudly so a human can intervene rather than wiping live content.
         command: |
           if [[ $(drush status --field=Database) == "Connected" ]]; then
-            DB_UUID=$(drush config-get system.site uuid --format=string 2>/dev/null || echo "none")
-            CONFIG_UUID=$(grep "^uuid:" /app/config/sync/system.site.yml | awk '{print $2}')
-            if [[ "$DB_UUID" == "$CONFIG_UUID" ]]; then
-              drush -y updb
-              drush -y cim
-            else
+            drush -y updb
+            if ! drush -y cim; then
+              if [[ "${LAGOON_ENVIRONMENT_TYPE}" == "production" ]]; then
+                echo "ERROR: drush cim failed on production — manual intervention required"
+                exit 1
+              fi
+              echo "drush cim failed — reinstalling from config/sync"
               drush -y si --existing-config
             fi
           fi
