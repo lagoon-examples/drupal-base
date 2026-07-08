@@ -21,7 +21,8 @@ tasks:
         shell: bash
     - run:
         name: drush cim
-        command: drush -y cim
+        command: |
+          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y cim; fi
         service: cli
         shell: bash
     - run:
