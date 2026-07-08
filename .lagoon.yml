@@ -13,10 +13,19 @@ tasks:
 
   post-rollout:
     - run:
-        name: drush updb
-        # This will only run if the database exists.
+        name: drush install or update
+        # If Drupal is not bootstrapped (fresh or wiped database), install it
+        # with the standard profile before running updates.
+        # drush en jsonapi is explicit here because drush cim is commented out
+        # and the standard profile does not enable jsonapi by default.
         command: |
-          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y updb; fi
+          if [[ $(drush status --field=Database) == "Connected" ]]; then
+            if ! drush status --field=Bootstrap 2>/dev/null | grep -qi "successful"; then
+              drush -y si standard
+            fi
+            drush -y updb
+            drush -y en jsonapi
+          fi
         service: cli
         shell: bash
     # - run:
