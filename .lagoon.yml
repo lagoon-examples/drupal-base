@@ -13,39 +13,28 @@ tasks:
 
   post-rollout:
     - run:
-        name: drush updb
-        # This will only run if the database exists.
-        command: |
-          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y updb; fi
-        service: cli
-        shell: bash
-    - run:
-        name: drush config uuid sync
-        # Ensures the site UUID matches config/sync/system.site.yml before
-        # importing. Required when the site was installed independently
-        # (e.g. first Lagoon deploy) and the DB UUID differs from the repo.
+        name: drush install or update
+        # If the site UUID in the DB matches config/sync, this is an existing
+        # install — run updb then cim as normal.
+        # If the UUIDs differ (fresh environment, or site was installed
+        # independently), reinstall from config/sync via --existing-config.
+        # This avoids the demo content that `drush si standard` creates and
+        # which would block cim from deleting config entities.
         command: |
           if [[ $(drush status --field=Database) == "Connected" ]]; then
+            DB_UUID=$(drush config-get system.site uuid --format=string 2>/dev/null || echo "none")
             CONFIG_UUID=$(grep "^uuid:" /app/config/sync/system.site.yml | awk '{print $2}')
-            drush config-set system.site uuid "$CONFIG_UUID" -y
+            if [[ "$DB_UUID" == "$CONFIG_UUID" ]]; then
+              drush -y updb
+              drush -y cim
+            else
+              drush -y si --existing-config
+            fi
           fi
         service: cli
         shell: bash
     - run:
-        name: drush cim
-        command: |
-          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y cim; fi
-        service: cli
-        shell: bash
-    - run:
-        name: drush en jsonapi
-        command: |
-          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y en jsonapi; fi
-        service: cli
-        shell: bash
-    - run:
         name: drush cr
-        # This will only run if the database exists.
         command: |
           if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y cr; fi
         service: cli
