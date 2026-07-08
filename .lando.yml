@@ -4,3 +4,31 @@ config:
   flavor: drupal
   build:
     - composer install
+
+services:
+  # Next.js frontend — mounts the sibling drupal-frontend repo.
+  # Clone drupal-frontend as a sibling of this directory before running lando start.
+  frontend:
+    type: node:22
+    # Run npm install on build, then start the dev server.
+    build:
+      - cd /app && npm install
+    command: npm run dev
+    overrides:
+      volumes:
+        - ../drupal-frontend:/app
+      working_dir: /app
+      environment:
+        DRUPAL_BASE_URL: http://drupal-base.lndo.site
+
+proxy:
+  frontend:
+    - drupal-frontend.lndo.site:3000
+
+tooling:
+  # Convenience wrapper: run Next.js npm commands inside the frontend container.
+  # Usage: lando npm <args>  (e.g. lando npm install some-package)
+  npm:
+    service: frontend
+    description: Run npm commands in the Next.js frontend container
+    dir: /app

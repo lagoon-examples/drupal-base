@@ -1,0 +1,28 @@
+# Drupal services configuration.
+# This file is scaffolded into web/sites/default/services.yml by composer install.
+#
+# CORS is required so the decoupled Next.js frontend can make requests to
+# Drupal's JSON:API from a different origin.
+
+parameters:
+  cors.config:
+    enabled: true
+    # Allowed headers for cross-origin requests.
+    allowedHeaders:
+      - '*'
+    # HTTP methods the frontend is permitted to use.
+    allowedMethods:
+      - GET
+      - OPTIONS
+    # Origins allowed to access the JSON:API.
+    # Add your production frontend URL here before deploying.
+    allowedOrigins:
+      - 'http://drupal-frontend.lndo.site'
+      - 'http://localhost:3000'
+      - 'http://localhost:3001'
+    # Expose no extra headers to the browser.
+    exposedHeaders: false
+    # Cache the preflight response for 1 hour.
+    maxAge: 3600
+    # No cookies / authentication credentials are sent cross-origin.
+    supportsCredentials: false
