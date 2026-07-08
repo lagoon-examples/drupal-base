@@ -26,6 +26,12 @@ tasks:
         service: cli
         shell: bash
     - run:
+        name: drush en jsonapi
+        command: |
+          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y en jsonapi; fi
+        service: cli
+        shell: bash
+    - run:
         name: drush cr
         # This will only run if the database exists.
         command: |
