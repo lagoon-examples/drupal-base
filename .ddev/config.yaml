@@ -1,0 +1,22 @@
+name: drupal-base
+type: drupal11
+docroot: web
+php_version: "8.4"
+webserver_type: nginx-fpm
+xdebug_enabled: false
+database:
+    type: mariadb
+    version: "10.11"
+composer_version: "2"
+use_dns_when_possible: true
+# Settings are managed by the Lagoon scaffolding (amazeeio/drupal_integrations),
+# which reads the LAGOON/MARIADB_* variables below.
+disable_settings_management: true
+web_environment:
+    - LAGOON=local
+    - MARIADB_HOST=db
+    - MARIADB_PORT=3306
+    - MARIADB_USERNAME=db
+    - MARIADB_PASSWORD=db
+    - MARIADB_DATABASE=db
+    - DRUSH_OPTIONS_URI=$DDEV_PRIMARY_URL
