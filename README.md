@@ -24,6 +24,35 @@ To see similar projects with additional services, please visit https://github.co
 
 * [Lando](https://docs.lando.dev/basics/installation.html#system-requirements)
 
+**OR**
+
+* [DDEV](https://ddev.readthedocs.io/en/stable/users/install/)
+
+## Local environment setup - DDEV
+
+1. Checkout the project repo:
+
+    ```bash
+    git clone https://github.com/lagoon-examples/drupal-base.git drupal-base && cd $_
+    ```
+
+2. Start DDEV and install dependencies:
+
+    ```bash
+    ddev start
+    ddev composer install
+    ```
+
+3. Install your Drupal site with Drush:
+
+    ```bash
+    ddev drush si -y
+    ```
+
+4. Visit the new site with `ddev launch`
+
+DDEV reuses the Lagoon settings scaffolding — the database connection is provided via `LAGOON`/`MARIADB_*` environment variables in `.ddev/config.yaml`, so no extra settings files are needed.
+
 ## Local environment setup - pygmy-
 
 1. Checkout this project repo and confirm the path is in Docker's file sharing config - https://docs.docker.com/docker-for-mac/#file-sharing
